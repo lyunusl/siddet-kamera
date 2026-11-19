@@ -1,5 +1,7 @@
 # Şiddet Kamera (prototip)
 
+Canlı kullanmak için → [surv.augelab.com](https://surv.augelab.com)
+
 Hastane, okul gibi yerlerde güvenlik kamerası görüntüsü ve sesinden **kavga / şiddet olayı** şüphesini ve
 **düşme, bayılma şüphesi, hareketsiz yatma** olaylarını algılayan araştırma prototipi. Bir video dosyasından
 alarm zaman çizelgesi üretir.
