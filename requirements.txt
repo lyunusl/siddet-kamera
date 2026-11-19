@@ -1,0 +1,10 @@
+# torch / torchvision CUDA 12.8 derlemesi:  pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+torch
+torchvision
+ultralytics>=8.3
+lap
+opencv-python
+numpy
+scipy
+scikit-learn
+torchlibrosa

@@ -1,0 +1,1421 @@
+{
+ "temel_ayar": {
+  "V_ESIK": 0.7500000000000001,
+  "V_YUKSEK": 0.97,
+  "A_ESIK": 0.3,
+  "SES_PAYI": 2.0,
+  "SURE_YUKSEK": 1.5,
+  "SURE_IKISI": 0.5,
+  "KAPANMA_SN": 3.0,
+  "BEKLEME_SN": 10.0,
+  "YUMUSATMA": 2
+ },
+ "olay_sayisi": 103,
+ "ses_esc50": {
+  "esik": 0.3,
+  "cam_kirilmasi_yakalama": {
+   "klip": 40,
+   "olay_cikan": 33,
+   "oran": 0.825,
+   "gruplar": {
+    "cam_kirilmasi": 33
+   }
+  },
+  "diger_siniflarda_olay_orani": 0.0015,
+  "diger_siniflar_saatte_olay": 1.1,
+  "en_cok_yanlis": [
+   [
+    "laughing",
+    0.05
+   ],
+   [
+    "crying_baby",
+    0.025
+   ],
+   [
+    "dog",
+    0.0
+   ],
+   [
+    "chirping_birds",
+    0.0
+   ],
+   [
+    "vacuum_cleaner",
+    0.0
+   ],
+   [
+    "thunderstorm",
+    0.0
+   ],
+   [
+    "door_wood_knock",
+    0.0
+   ],
+   [
+    "can_opening",
+    0.0
+   ]
+  ],
+  "sinif": {
+   "dog": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "chirping_birds": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "vacuum_cleaner": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "thunderstorm": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "door_wood_knock": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "can_opening": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "crow": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "clapping": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "fireworks": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "chainsaw": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "airplane": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "mouse_click": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "pouring_water": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "train": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "sheep": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "water_drops": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "church_bells": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "clock_alarm": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "keyboard_typing": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "wind": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "footsteps": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "frog": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "cow": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "brushing_teeth": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "car_horn": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "crackling_fire": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "helicopter": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "drinking_sipping": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "rain": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "insects": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "laughing": {
+    "klip": 40,
+    "olay_cikan": 2,
+    "oran": 0.05,
+    "gruplar": {
+     "cigilk_bagirma": 2
+    }
+   },
+   "hen": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "engine": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "breathing": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "crying_baby": {
+    "klip": 40,
+    "olay_cikan": 1,
+    "oran": 0.025,
+    "gruplar": {
+     "cigilk_bagirma": 1
+    }
+   },
+   "hand_saw": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "coughing": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "glass_breaking": {
+    "klip": 40,
+    "olay_cikan": 33,
+    "oran": 0.825,
+    "gruplar": {
+     "cam_kirilmasi": 33
+    }
+   },
+   "snoring": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "toilet_flush": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "pig": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "washing_machine": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "clock_tick": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "sneezing": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "rooster": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "sea_waves": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "siren": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "cat": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "door_wood_creaks": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   },
+   "crickets": {
+    "klip": 40,
+    "olay_cikan": 0,
+    "oran": 0.0,
+    "gruplar": {}
+   }
+  }
+ },
+ "denemeler": [
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.8,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "kapali",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 2,
+     "saatte": 27.2,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 5,
+     "saatte": 95.7,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 3,
+     "saatte": 145.4,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 10,
+    "saatte": 43.1,
+    "saatte_guven_araligi_95": [
+     20.7,
+     79.3
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 70,
+    "duyarlilik": 0.68,
+    "veri_bazli": {
+     "airtlab": "37/50",
+     "bus": "30/46",
+     "survfight": "3/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.8,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "gunluk_ses",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 2,
+     "saatte": 27.2,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 5,
+     "saatte": 95.7,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 3,
+     "saatte": 145.4,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 10,
+    "saatte": 43.1,
+    "saatte_guven_araligi_95": [
+     20.7,
+     79.3
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 70,
+    "duyarlilik": 0.68,
+    "veri_bazli": {
+     "airtlab": "37/50",
+     "bus": "30/46",
+     "survfight": "3/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.8,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "ust_sinir",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 2,
+     "saatte": 27.2,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 5,
+     "saatte": 95.7,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 3,
+     "saatte": 145.4,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 10,
+    "saatte": 43.1,
+    "saatte_guven_araligi_95": [
+     20.7,
+     79.3
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 94,
+    "duyarlilik": 0.913,
+    "veri_bazli": {
+     "airtlab": "45/50",
+     "bus": "44/46",
+     "survfight": "5/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.85,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "kapali",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 1,
+     "saatte": 13.6,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 4,
+     "saatte": 76.6,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 3,
+     "saatte": 145.4,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 8,
+    "saatte": 34.5,
+    "saatte_guven_araligi_95": [
+     14.9,
+     67.9
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 64,
+    "duyarlilik": 0.621,
+    "veri_bazli": {
+     "airtlab": "37/50",
+     "bus": "24/46",
+     "survfight": "3/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.85,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "gunluk_ses",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 1,
+     "saatte": 13.6,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 4,
+     "saatte": 76.6,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 3,
+     "saatte": 145.4,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 8,
+    "saatte": 34.5,
+    "saatte_guven_araligi_95": [
+     14.9,
+     67.9
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 64,
+    "duyarlilik": 0.621,
+    "veri_bazli": {
+     "airtlab": "37/50",
+     "bus": "24/46",
+     "survfight": "3/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.85,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "ust_sinir",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 1,
+     "saatte": 13.6,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 4,
+     "saatte": 76.6,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 3,
+     "saatte": 145.4,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 8,
+    "saatte": 34.5,
+    "saatte_guven_araligi_95": [
+     14.9,
+     67.9
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 94,
+    "duyarlilik": 0.913,
+    "veri_bazli": {
+     "airtlab": "45/50",
+     "bus": "44/46",
+     "survfight": "5/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.9,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "kapali",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 4,
+     "saatte": 76.6,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 2,
+     "saatte": 96.9,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 6,
+    "saatte": 25.9,
+    "saatte_guven_araligi_95": [
+     9.5,
+     56.3
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 59,
+    "duyarlilik": 0.573,
+    "veri_bazli": {
+     "airtlab": "36/50",
+     "bus": "20/46",
+     "survfight": "3/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.9,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "gunluk_ses",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 4,
+     "saatte": 76.6,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 2,
+     "saatte": 96.9,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 6,
+    "saatte": 25.9,
+    "saatte_guven_araligi_95": [
+     9.5,
+     56.3
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 59,
+    "duyarlilik": 0.573,
+    "veri_bazli": {
+     "airtlab": "36/50",
+     "bus": "20/46",
+     "survfight": "3/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.9,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "ust_sinir",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 4,
+     "saatte": 76.6,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 2,
+     "saatte": 96.9,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 6,
+    "saatte": 25.9,
+    "saatte_guven_araligi_95": [
+     9.5,
+     56.3
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 94,
+    "duyarlilik": 0.913,
+    "veri_bazli": {
+     "airtlab": "45/50",
+     "bus": "44/46",
+     "survfight": "5/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.95,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "kapali",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 4,
+     "saatte": 76.6,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 4,
+    "saatte": 17.2,
+    "saatte_guven_araligi_95": [
+     4.7,
+     44.1
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 46,
+    "duyarlilik": 0.447,
+    "veri_bazli": {
+     "airtlab": "32/50",
+     "bus": "12/46",
+     "survfight": "2/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.95,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "gunluk_ses",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 4,
+     "saatte": 76.6,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 4,
+    "saatte": 17.2,
+    "saatte_guven_araligi_95": [
+     4.7,
+     44.1
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 46,
+    "duyarlilik": 0.447,
+    "veri_bazli": {
+     "airtlab": "32/50",
+     "bus": "12/46",
+     "survfight": "2/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.95,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "ust_sinir",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 4,
+     "saatte": 76.6,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 4,
+    "saatte": 17.2,
+    "saatte_guven_araligi_95": [
+     4.7,
+     44.1
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 94,
+    "duyarlilik": 0.913,
+    "veri_bazli": {
+     "airtlab": "45/50",
+     "bus": "44/46",
+     "survfight": "5/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.98,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "kapali",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 2,
+     "saatte": 38.3,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 2,
+    "saatte": 8.6,
+    "saatte_guven_araligi_95": [
+     1.0,
+     31.1
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 36,
+    "duyarlilik": 0.35,
+    "veri_bazli": {
+     "airtlab": "27/50",
+     "bus": "7/46",
+     "survfight": "2/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.98,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "gunluk_ses",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 2,
+     "saatte": 38.3,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 2,
+    "saatte": 8.6,
+    "saatte_guven_araligi_95": [
+     1.0,
+     31.1
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 36,
+    "duyarlilik": 0.35,
+    "veri_bazli": {
+     "airtlab": "27/50",
+     "bus": "7/46",
+     "survfight": "2/7"
+    }
+   }
+  },
+  {
+   "ayar": {
+    "V_ESIK": 0.7500000000000001,
+    "V_YUKSEK": 0.98,
+    "A_ESIK": 0.3,
+    "SES_PAYI": 2.0,
+    "SURE_YUKSEK": 1.5,
+    "SURE_IKISI": 0.5,
+    "KAPANMA_SN": 3.0,
+    "BEKLEME_SN": 10.0,
+    "YUMUSATMA": 2
+   },
+   "senaryo": "ust_sinir",
+   "kategori": {
+    "gunluk_hareket": {
+     "klip": 20,
+     "dakika": 3.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "hasta_dusmesi": {
+     "klip": 17,
+     "dakika": 1.73,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "otobus_normal": {
+     "klip": 140,
+     "dakika": 4.41,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    },
+    "sarilma_alkis_selam": {
+     "klip": 30,
+     "dakika": 3.13,
+     "yanlis_alarm": 2,
+     "saatte": 38.3,
+     "ses_yolundan": 0
+    },
+    "sokak_normal": {
+     "klip": 28,
+     "dakika": 1.24,
+     "yanlis_alarm": 0,
+     "saatte": 0.0,
+     "ses_yolundan": 0
+    }
+   },
+   "olumsuz_toplam": {
+    "dakika": 13.9,
+    "yanlis_alarm": 2,
+    "saatte": 8.6,
+    "saatte_guven_araligi_95": [
+     1.0,
+     31.1
+    ]
+   },
+   "olaylar": {
+    "olay": 103,
+    "yakalanan": 94,
+    "duyarlilik": 0.913,
+    "veri_bazli": {
+     "airtlab": "45/50",
+     "bus": "44/46",
+     "survfight": "5/7"
+    }
+   }
+  }
+ ]
+}

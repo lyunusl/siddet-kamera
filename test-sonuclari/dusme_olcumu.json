@@ -1,0 +1,108 @@
+{
+ "ayar": {
+  "YATAY_ACI": 60,
+  "DIK_ACI": 35.0,
+  "YATAY_KUTU": 1.1,
+  "DIK_KUTU": 0.75,
+  "DUSUS_PENCERE": 2.0,
+  "DUSUS_ORAN": 0.25,
+  "DUSUS_HIZ_SN": 0.6,
+  "YUVARLANMA_ORAN": 0.45,
+  "YATMA_KALICI": 0.4,
+  "HAREKET_ESIK": 0.06,
+  "BAYILMA_SN": 10.0,
+  "HAREKETSIZ_SN": 30.0,
+  "BOSLUK_SN": 3.0,
+  "ESLESTIRME": 1.0,
+  "yatak_bolgeleri": []
+ },
+ "gmdcsa_ayar_denek_1_3": {
+  "tp": 44,
+  "fn": 18,
+  "fp": 1,
+  "tn": 60,
+  "kesinlik": 0.978,
+  "duyarlilik": 0.71,
+  "f1": 0.822
+ },
+ "gmdcsa_test_denek_4": {
+  "tp": 7,
+  "fn": 10,
+  "fp": 2,
+  "tn": 18,
+  "kesinlik": 0.778,
+  "duyarlilik": 0.412,
+  "f1": 0.538
+ },
+ "diger_test": {
+  "bus:kavga": {
+   "klip": 140,
+   "dusme_cikan": 2
+  },
+  "bus:normal": {
+   "klip": 140,
+   "dusme_cikan": 0
+  },
+  "airtlab:kavga": {
+   "klip": 50,
+   "dusme_cikan": 4
+  },
+  "airtlab:normal": {
+   "klip": 30,
+   "dusme_cikan": 0
+  },
+  "survfight:kavga": {
+   "klip": 22,
+   "dusme_cikan": 0
+  },
+  "survfight:normal": {
+   "klip": 28,
+   "dusme_cikan": 0
+  }
+ },
+ "uretilen": {
+  "b1_hastane_bayilma": [
+   {
+    "tur": "dusme",
+    "t": 9.0,
+    "iz": 1,
+    "inis": 0.3,
+    "yatakta": false
+   },
+   {
+    "tur": "bayilma",
+    "t": 13.42,
+    "iz": 1,
+    "dusme_t": 9.0,
+    "hareketsiz_sn": 3.0
+   }
+  ],
+  "b2_okul_bayilma": [],
+  "u01_kosan_cocuklar": [],
+  "u02_bahce_sakalasma": [],
+  "u03_basketbol": [],
+  "u04_hastane_kucaklasma": [],
+  "u05_kalabalik_koridor": [],
+  "u06_hasta_dusmesi": [
+   {
+    "tur": "dusme",
+    "t": 3.5,
+    "iz": 4,
+    "inis": 0.59,
+    "yatakta": false
+   }
+  ],
+  "u07_ajite_hasta": [],
+  "u08_okul_cikisi": []
+ },
+ "vekil_hareketsizlik_1_5sn": {
+  "dusme_sonrasi_bayilma": [
+   79,
+   18
+  ],
+  "adl_hareketsiz_yatma": [
+   81,
+   8
+  ]
+ }
+}

@@ -1,0 +1,150 @@
+{
+ "klipler": {
+  "u01_kosan_cocuklar": {
+   "kategori": "cocuk",
+   "sure": 8.04,
+   "en_yuksek_goruntu": 1.0,
+   "ort_kisi": 2.4,
+   "alarm": 1,
+   "alarmlar": [
+    {
+     "bas": 7.24,
+     "bit": 7.24,
+     "nedenler": [
+      "yalniz_goruntu"
+     ],
+     "en_goruntu": 1.0,
+     "en_ses": 0.0,
+     "ses_olaylari": []
+    }
+   ]
+  },
+  "u02_bahce_sakalasma": {
+   "kategori": "cocuk",
+   "sure": 8.04,
+   "en_yuksek_goruntu": 0.996,
+   "ort_kisi": 2.4,
+   "alarm": 1,
+   "alarmlar": [
+    {
+     "bas": 7.24,
+     "bit": 7.24,
+     "nedenler": [
+      "yalniz_goruntu"
+     ],
+     "en_goruntu": 0.977,
+     "en_ses": 0.0,
+     "ses_olaylari": []
+    }
+   ]
+  },
+  "u03_basketbol": {
+   "kategori": "spor",
+   "sure": 8.04,
+   "en_yuksek_goruntu": 0.994,
+   "ort_kisi": 1.4,
+   "alarm": 1,
+   "alarmlar": [
+    {
+     "bas": 5.3,
+     "bit": 5.3,
+     "nedenler": [
+      "yalniz_goruntu"
+     ],
+     "en_goruntu": 0.973,
+     "en_ses": 0.0,
+     "ses_olaylari": []
+    }
+   ]
+  },
+  "u04_hastane_kucaklasma": {
+   "kategori": "sarilma",
+   "sure": 8.04,
+   "en_yuksek_goruntu": 0.676,
+   "ort_kisi": 4.1,
+   "alarm": 0,
+   "alarmlar": []
+  },
+  "u05_kalabalik_koridor": {
+   "kategori": "kalabalik",
+   "sure": 8.04,
+   "en_yuksek_goruntu": 0.863,
+   "ort_kisi": 3.8,
+   "alarm": 0,
+   "alarmlar": []
+  },
+  "u06_hasta_dusmesi": {
+   "kategori": "dusme",
+   "sure": 8.04,
+   "en_yuksek_goruntu": 0.999,
+   "ort_kisi": 1.9,
+   "alarm": 1,
+   "alarmlar": [
+    {
+     "bas": 3.3,
+     "bit": 4.3,
+     "nedenler": [
+      "yalniz_goruntu"
+     ],
+     "en_goruntu": 0.999,
+     "en_ses": 0.0,
+     "ses_olaylari": []
+    }
+   ]
+  },
+  "u07_ajite_hasta": {
+   "kategori": "hasta_zapt",
+   "sure": 8.04,
+   "en_yuksek_goruntu": 0.137,
+   "ort_kisi": 2.0,
+   "alarm": 0,
+   "alarmlar": []
+  },
+  "u08_okul_cikisi": {
+   "kategori": "kalabalik",
+   "sure": 8.04,
+   "en_yuksek_goruntu": 0.134,
+   "ort_kisi": 13.7,
+   "alarm": 0,
+   "alarmlar": []
+  }
+ },
+ "akis": {
+  "0.80": {
+   "dakika": 1.14,
+   "yanlis_alarm": 2,
+   "saatte": 105.1
+  },
+  "0.85": {
+   "dakika": 1.14,
+   "yanlis_alarm": 2,
+   "saatte": 105.1
+  },
+  "0.90": {
+   "dakika": 1.14,
+   "yanlis_alarm": 2,
+   "saatte": 105.1
+  },
+  "0.95": {
+   "dakika": 1.14,
+   "yanlis_alarm": 2,
+   "saatte": 105.1
+  },
+  "0.98": {
+   "dakika": 1.14,
+   "yanlis_alarm": 2,
+   "saatte": 105.1
+  }
+ },
+ "ayar": {
+  "V_ESIK": 0.7500000000000001,
+  "V_YUKSEK": 0.95,
+  "A_ESIK": 0.3,
+  "SES_PAYI": 2.0,
+  "SURE_YUKSEK": 1.5,
+  "SURE_IKISI": 0.5,
+  "KAPANMA_SN": 3.0,
+  "BEKLEME_SN": 10.0,
+  "YUMUSATMA": 2
+ }
+}
