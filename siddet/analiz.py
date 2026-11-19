@@ -91,6 +91,7 @@ class Analizci:
         for a in olay:
             a["dusme_ile_cakisiyor"] = any(d["tur"] == "dusme" and a["bas"] - 3 <= d["t"] <= a["bit"] + 3 for d in dusme)
         return dict(video=Path(video).name, sure_sn=round(poz.sure, 2), analiz_sn=round(time.time() - bas, 1),
+                    kavga_analizi=("yapildi" if self.kavga is not None else "yapilmadi: modeller/iskelet_kavga.pt eksik"),
                     ses_var=sc is not None, ayar=ayar_sozluk(self.ayar), alarmlar=olay,
                     ses_olaylari=olaylari_cikar(sc, self.ayar.A_ESIK) if sc else [],
                     dusme_olaylari=dusme,
@@ -185,9 +186,14 @@ def html_yaz(sonuc: dict, hedef: Path):
     satirlar = "".join(
         f"<tr><td>{a['bas']:.1f} – {a['bit']:.1f} sn</td><td>{'Görüntü + ses' if 'goruntu_ve_ses' in a['nedenler'] else 'Yalnız görüntü (çok yüksek)'}{' · düşmeyle çakışıyor' if a.get('dusme_ile_cakisiyor') else ''}</td>"
         f"<td>{a['en_goruntu']:.2f}</td><td>{a['en_ses']:.2f}</td><td>{', '.join(OLAY_ADLARI.get(x, x) for x in a['ses_olaylari']) or '—'}</td></tr>"
-        for a in sonuc["alarmlar"]) or '<tr><td colspan="5">Alarm yok</td></tr>'
+        for a in sonuc["alarmlar"]) or ('<tr><td colspan="5">Alarm yok</td></tr>' if sonuc.get("kavga_analizi", "yapildi") == "yapildi"
+            else '<tr><td colspan="5">Kavga analizi yapılmadı: modeller/iskelet_kavga.pt eksik</td></tr>')
     olaylar = "".join(f"<li>{o['bas']:.1f}–{o['bit']:.1f} sn · {o['ad']} · {o['puan']:.2f}</li>" for o in sonuc["ses_olaylari"]) \
         or "<li>Ses olayı yok" + ("" if sonuc["ses_var"] else " (videoda ses kanalı yok)") + "</li>"
+    if sonuc.get("kavga_analizi", "yapildi") == "yapildi":
+        kavga_rozet = f'<span class="rozet">{len(sonuc["alarmlar"])} kavga alarmı</span>'
+    else:
+        kavga_rozet = '<span class="rozet" style="background:#555">Kavga analizi yapılmadı: model eksik</span>'
     dusmeler = "".join(f"<li>{o['t']:.1f} sn · {DUSME_ADLARI[o['tur']]}" + (f" · {o['hareketsiz_sn']:.0f} sn hareketsiz" if 'hareketsiz_sn' in o else "")
                        + "</li>" for o in sonuc.get("dusme_olaylari", [])) or "<li>Yok</li>"
     dusme_isaret = "".join(f'<line x1="{X(o["t"]):.1f}" x2="{X(o["t"]):.1f}" y1="14" y2="206" stroke="#ffb547" stroke-width="2"/>'
@@ -205,7 +211,7 @@ table{{border-collapse:collapse;width:100%}} td,th{{border-bottom:1px solid #233
 th{{color:#ffb547;font-weight:600}} .rozet{{display:inline-block;background:#ff3b3b;color:#fff;border-radius:4px;padding:1px 8px;font-weight:700}}
 </style></head><body>
 <h1>ŞİDDET VE DÜŞME KAMERASI · OLAY ZAMAN ÇİZELGESİ</h1>
-<div class="alt">{html_kacis(sonuc['video'])} · {sonuc['sure_sn']:.1f} sn · <span class="rozet">{len(sonuc['alarmlar'])} kavga alarmı</span> <span class="rozet" style="background:#ffb547;color:#111">{len(sonuc.get('dusme_olaylari', []))} düşme/hareketsizlik</span> ·
+<div class="alt">{html_kacis(sonuc['video'])} · {sonuc['sure_sn']:.1f} sn · {kavga_rozet} <span class="rozet" style="background:#ffb547;color:#111">{len(sonuc.get('dusme_olaylari', []))} düşme/hareketsizlik</span> ·
 yüzler gizli · ses kaydedilmedi, yalnız olay üretildi · prototip, araştırma amaçlı</div>
 <div class="kart"><svg viewBox="0 0 {W} {H + 10}">{alarm}
 <text x="4" y="24" class="k">görüntü</text><text x="4" y="140" class="k">ses</text>
@@ -244,7 +250,8 @@ def main():
     html_yaz(sonuc, cikti / "zaman_cizelgesi.html")
     if a.video_yaz:
         isaretli_video_yaz(a.video, poz, sonuc, cikti / "isaretli.mp4", poz_modeli=an.poz_modeli)
-    print(f"{sonuc['video']}: {sonuc['sure_sn']:.1f} sn, {len(sonuc['alarmlar'])} alarm, analiz {sonuc['analiz_sn']} sn")
+    kavga = f"{len(sonuc['alarmlar'])} kavga alarmı" if sonuc["kavga_analizi"] == "yapildi" else "kavga analizi yapılmadı (model eksik)"
+    print(f"{sonuc['video']}: {sonuc['sure_sn']:.1f} sn, {kavga}, analiz {sonuc['analiz_sn']} sn")
     for al in sonuc["alarmlar"]:
         print(f"  ALARM {al['bas']:.1f}-{al['bit']:.1f} sn  {'+'.join(al['nedenler'])}  görüntü {al['en_goruntu']:.2f} ses {al['en_ses']:.2f}")
     for o in sonuc["dusme_olaylari"]:
