@@ -1,0 +1,114 @@
+{
+ "ayar": {
+  "YATAY_ACI": 60.0,
+  "DIK_ACI": 35.0,
+  "YATAY_KUTU": 1.1,
+  "DIK_KUTU": 0.75,
+  "DUSUS_PENCERE": 2.0,
+  "DUSUS_ORAN": 0.25,
+  "DUSUS_HIZ_SN": 0.6,
+  "YUVARLANMA_ORAN": 0.45,
+  "YATMA_KALICI": 0.4,
+  "HAREKET_ESIK": 0.06,
+  "BAYILMA_SN": 10.0,
+  "HAREKETSIZ_SN": 30.0,
+  "BOSLUK_SN": 3.0,
+  "ESLESTIRME": 1.0,
+  "yatak_bolgeleri": []
+ },
+ "klipler": {
+  "b1_hastane_bayilma@640": {
+   "kisi_gorulen_kare": 205,
+   "kare": 226,
+   "bayilma_10sn": [
+    {
+     "tur": "dusme",
+     "t": 9.0,
+     "iz": 1,
+     "inis": 0.3,
+     "yatakta": false
+    }
+   ],
+   "bayilma_4sn": [
+    {
+     "tur": "dusme",
+     "t": 9.0,
+     "iz": 1,
+     "inis": 0.3,
+     "yatakta": false
+    },
+    {
+     "tur": "bayilma",
+     "t": 14.42,
+     "iz": 1,
+     "dusme_t": 9.0,
+     "hareketsiz_sn": 4.0
+    }
+   ]
+  },
+  "b1_hastane_bayilma@1280": {
+   "kisi_gorulen_kare": 205,
+   "kare": 226,
+   "bayilma_10sn": [
+    {
+     "tur": "dusme",
+     "t": 9.0,
+     "iz": 1,
+     "inis": 0.29,
+     "yatakta": false
+    }
+   ],
+   "bayilma_4sn": [
+    {
+     "tur": "dusme",
+     "t": 9.0,
+     "iz": 1,
+     "inis": 0.29,
+     "yatakta": false
+    },
+    {
+     "tur": "bayilma",
+     "t": 14.29,
+     "iz": 1,
+     "dusme_t": 9.0,
+     "hareketsiz_sn": 4.0
+    }
+   ]
+  },
+  "b2_okul_bayilma@640": {
+   "kisi_gorulen_kare": 4,
+   "kare": 226,
+   "bayilma_10sn": [],
+   "bayilma_4sn": []
+  },
+  "b2_okul_bayilma@1280": {
+   "kisi_gorulen_kare": 205,
+   "kare": 226,
+   "bayilma_10sn": [
+    {
+     "tur": "dusme",
+     "t": 3.75,
+     "iz": 1,
+     "inis": 0.37,
+     "yatakta": false
+    }
+   ],
+   "bayilma_4sn": [
+    {
+     "tur": "dusme",
+     "t": 3.75,
+     "iz": 1,
+     "inis": 0.37,
+     "yatakta": false
+    },
+    {
+     "tur": "bayilma",
+     "t": 9.21,
+     "iz": 1,
+     "dusme_t": 3.75,
+     "hareketsiz_sn": 4.0
+    }
+   ]
+  }
+ }
+}

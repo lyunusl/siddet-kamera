@@ -4,7 +4,10 @@ Ses yalnızca bellekte işlenir: ffmpeg sesi doğrudan bu sürece akıtır, disk
 saklanmaz. Çıktı yalnızca olaylardır (zaman, olay türü, puan). Konuşma içeriği, kimlik
 ya da duygu çıkarılmaz; yalnızca ses olayı sınıfları kullanılır.
 
-Model: Kong ve ark., "PANNs" (2020), kod MIT, ağırlıklar Zenodo 3987831 (CC BY 4.0).
+Model: Kong ve ark., "PANNs" (2020), ağırlıklar Zenodo 3987831 (CC BY 4.0).
+Aşağıdaki `Cnn14` ve `_Blok` sınıfları qiuqiangkong/audioset_tagging_cnn (pytorch/models.py) kodundan
+uyarlanmıştır: Copyright (c) 2018-2020 Qiuqiang Kong, MIT Lisansı; lisans metni
+ucuncu-taraf/PANNs-LICENSE.MIT.txt dosyasındadır.
 """
 from __future__ import annotations
 

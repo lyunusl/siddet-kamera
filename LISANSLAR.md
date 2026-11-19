@@ -33,7 +33,8 @@ Hukuki görüş değildir; ticari ürüne geçmeden önce her satır için yazar
 | Model | Görev | Lisans | Ticari |
 |---|---|---|---|
 | **YOLO11m-pose** (Ultralytics) + ByteTrack (Ultralytics içi) | Kişi, iskelet, takip | **AGPL-3.0**; kapalı kaynak ticari ürün için Ultralytics Enterprise lisansı gerekir | AGPL koşullarıyla (Kafe Kamera ile aynı durum) |
-| **PANNs Cnn14** (Kong ve ark. 2020; ağırlık Zenodo 3987831) | Ses olayı (AudioSet 527 sınıf) | Ağırlıklar **CC BY 4.0**; özgün kod MIT (`siddet/ses.py` içindeki Cnn14 tanımı o koda dayanır) | Evet (atıfla). Not: AudioSet etiketleri CC BY 4.0, ama eğitildiği sesler YouTube'dan. |
+| **PANNs Cnn14** (Kong ve ark. 2020; ağırlık Zenodo 3987831) | Ses olayı (AudioSet 527 sınıf) | Ağırlıklar **CC BY 4.0** (indirilir, depoda yok). `siddet/ses.py` içindeki Cnn14 tanımı qiuqiangkong/audioset_tagging_cnn kodundan uyarlandı: Copyright (c) 2018-2020 Qiuqiang Kong, **MIT**, metin `ucuncu-taraf/PANNs-LICENSE.MIT.txt` | Evet (atıfla). Not: AudioSet etiketleri CC BY 4.0, ama eğitildiği sesler YouTube'dan. |
+| **YuNet** (OpenCV Zoo, `face_detection_yunet_2023mar.onnx`) | Çıktıda yüz gizleme | Copyright (c) 2020 Shiqi Yu, **MIT**, metin `ucuncu-taraf/YuNet-LICENSE.txt` (model indirilir, depoda yok) | Evet |
 | **İskelet kavga sınıflandırıcısı** (`modeller/iskelet_kavga.pt`) | Kavga / normal | Bizim eğitimimiz; ama **yukarıdaki araştırma lisanslı verilerle eğitildi** | **Hayır** — ürün için lisansı temiz veriyle yeniden eğitilmeli |
 
 ## Sonuç

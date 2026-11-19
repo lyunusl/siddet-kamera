@@ -131,7 +131,7 @@ class YuzGizleyici:
     """Diske ya da ekrana giden her karede yüzleri gizler. Üç katman:
     1) takipteki kişilerin baş bölgesi, 2) ayrı, düşük eşikli (0,10) ve yüksek çözünürlüklü bir
     kişi taraması (takipte kaçan, yerde yatan, bulanık kişiler için), 3) YuNet yüz algılayıcı
-    (MIT lisanslı, OpenCV). Son HAFIZA_SN içinde gizlenen bölgeler de gizlenmeye devam eder."""
+    (Copyright (c) 2020 Shiqi Yu, MIT; lisans metni ucuncu-taraf/YuNet-LICENSE.txt). Son HAFIZA_SN içinde gizlenen bölgeler de gizlenmeye devam eder."""
 
     HAFIZA_SN = 0.6
 

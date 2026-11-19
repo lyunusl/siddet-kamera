@@ -13,6 +13,7 @@ Yüzler her zaman pikselli. Ses diske yazılmaz, çıktı videoya konmaz; yalnı
 from __future__ import annotations
 
 import argparse
+from html import escape as html_kacis
 import json
 import subprocess
 import time
@@ -40,19 +41,28 @@ class Analizci:
         self.imgsz = imgsz
         self.dusme_ayar = dusme_ayar or DusmeAyar()
         self.cihaz = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        d = torch.load(ISKELET_MODELI, map_location="cpu", weights_only=False)
-        uyeler = []
-        for durum in d["durumlar"]:
-            m = IskeletKavga(d["F"]); m.load_state_dict(durum); uyeler.append(m)
-        self.kavga = Topluluk(uyeler).to(self.cihaz).eval()
+        self.kavga = None
+        esik = 0.75
+        if ISKELET_MODELI.exists():
+            d = torch.load(ISKELET_MODELI, map_location="cpu", weights_only=False)
+            uyeler = []
+            for durum in d["durumlar"]:
+                m = IskeletKavga(d["F"]); m.load_state_dict(durum); uyeler.append(m)
+            self.kavga = Topluluk(uyeler).to(self.cihaz).eval()
+            esik = float(d["esik"])
+        else:
+            print("UYARI: modeller/iskelet_kavga.pt yok; kavga algılama kapalı, yalnız düşme / bayılma / "
+                  "hareketsizlik çalışır. Kavga modeli için README içindeki Yeniden üretmek bölümüne bakın.")
         # V_ESIK: doğrulamada klip kesinliği >= 0,90 olan eşik. V_YUKSEK: test-sonuclari/alarm_olcumu.json
         # taramasında seçilen çalışma noktası (0,95: olumsuz akışta saatte ~17 yanlış alarm, yakalama ~%45).
-        self.ayar = ayar or Ayar(V_ESIK=float(d["esik"]), V_YUKSEK=0.95)
+        self.ayar = ayar or Ayar(V_ESIK=esik, V_YUKSEK=0.95)
         self.poz_modeli = None
         self.ses = SesOlayi(self.cihaz) if ses else None
 
     @torch.no_grad()
     def goruntu_cizelgesi(self, p: PozDizisi):
+        if self.kavga is None:
+            return []
         sure = max(p.sure, p.kareler[-1].t if p.kareler else 0.0)
         baslar = pencere_baslangiclari(sure, ADIM)
         xs, kisi = [], []
@@ -186,7 +196,7 @@ def html_yaz(sonuc: dict, hedef: Path):
     alarm += dusme_isaret
     tik = "".join(f'<text x="{X(t):.0f}" y="216" class="k">{t:.0f}</text>' for t in np.arange(0, sure + 0.01, max(1, round(sure / 10))))
     html = f"""<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Şiddet Kamera · {sonuc['video']}</title><style>
+<title>Şiddet Kamera · {html_kacis(sonuc['video'])}</title><style>
 body{{background:#0b0e13;color:#e8edf3;font:15px/1.5 system-ui,Segoe UI,sans-serif;margin:0;padding:24px}}
 h1{{font-size:20px;margin:0 0 4px;letter-spacing:.04em}} .alt{{color:#8a96a8;margin-bottom:18px}}
 .kart{{background:#121822;border:1px solid #233044;border-radius:10px;padding:16px;margin-bottom:16px;overflow-x:auto}}
@@ -195,7 +205,7 @@ table{{border-collapse:collapse;width:100%}} td,th{{border-bottom:1px solid #233
 th{{color:#ffb547;font-weight:600}} .rozet{{display:inline-block;background:#ff3b3b;color:#fff;border-radius:4px;padding:1px 8px;font-weight:700}}
 </style></head><body>
 <h1>ŞİDDET VE DÜŞME KAMERASI · OLAY ZAMAN ÇİZELGESİ</h1>
-<div class="alt">{sonuc['video']} · {sonuc['sure_sn']:.1f} sn · <span class="rozet">{len(sonuc['alarmlar'])} kavga alarmı</span> <span class="rozet" style="background:#ffb547;color:#111">{len(sonuc.get('dusme_olaylari', []))} düşme/hareketsizlik</span> ·
+<div class="alt">{html_kacis(sonuc['video'])} · {sonuc['sure_sn']:.1f} sn · <span class="rozet">{len(sonuc['alarmlar'])} kavga alarmı</span> <span class="rozet" style="background:#ffb547;color:#111">{len(sonuc.get('dusme_olaylari', []))} düşme/hareketsizlik</span> ·
 yüzler gizli · ses kaydedilmedi, yalnız olay üretildi · prototip, araştırma amaçlı</div>
 <div class="kart"><svg viewBox="0 0 {W} {H + 10}">{alarm}
 <text x="4" y="24" class="k">görüntü</text><text x="4" y="140" class="k">ses</text>

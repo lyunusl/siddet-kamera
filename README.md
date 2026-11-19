@@ -7,10 +7,13 @@ alarm zaman çizelgesi üretir.
 - **Duygu tanıma yapmaz.** Kimsenin yüz ifadesine, ses tonuna ya da duygusuna bakılmaz (AB Yapay Zekâ Yasası
   okul ve işyerinde duygu tanımayı yasaklar). Yalnız **olay** algılanır: kavga hareketi (iskelet), çığlık/bağırma,
   cam kırılması, darbe sesi.
-- **Yüzler her zaman gizli.** Çıktı videosunda bütün sahne kaba piksele indirilir, ayrıca her kişinin başı ve
-  YuNet'in bulduğu yüzler ayrıca pikselleştirilir; iskelet bunun üstüne çizilir.
-- **Ses kaydedilmez.** Ses ffmpeg'den doğrudan belleğe akar, diske yazılmaz, çıktı videosu sessizdir. Kalan tek
-  şey olay listesidir (zaman, olay türü, puan).
+- **Çıktıda yüzler gizlenir.** İşaretli videoda (`--video-yaz`, isteğe bağlı) bütün sahne kaba piksele indirilir,
+  her kişinin başı ve YuNet'in bulduğu yüzler ayrıca pikselleştirilir; iskelet bunun üstüne çizilir. Pikselleme
+  tanınmayı zorlaştırır, anonimlik garantisi değildir (kıyafet, boy, yer, zaman yine bilgi taşır). Analiz sırasında
+  ham görüntü bilgisayarın belleğinde işlenir.
+- **Ses kaydedilmez.** Ses ffmpeg'den doğrudan belleğe akar, diske yazılmaz, çıktı videosu sessizdir. Sesten geriye
+  yalnız olay puanları kalır. `zaman_cizelgesi.json` ve `.html` ayrıca video dosyasının adını ve 0,5 sn'lik
+  görüntü/ses puan serisini içerir (görüntü ve ses içermez).
 - **Ticari ürün değildir.** Kavga modeli araştırma lisanslı verilerle eğitildi, bkz. [LISANSLAR.md](LISANSLAR.md).
 
 ## Nasıl çalışır?
@@ -63,6 +66,9 @@ için dağıtılmıyor (bkz. [LISANSLAR.md](LISANSLAR.md)); veri setlerini kendi
 "Yeniden üretmek" adımlarıyla eğitin. Düşme / bayılma modülü eğitim gerektirmez.
 
 ## Çalıştırma
+
+Kavga algılama için önce `modeller/iskelet_kavga.pt` eğitilmiş olmalı ("Yeniden üretmek"). Bu dosya yoksa analiz
+yine çalışır, ama yalnız düşme / bayılma / hareketsizlik üretir (ekrana uyarı yazar).
 
 ```
 .venv\Scripts\python -m siddet.analiz VIDEO.mp4 --video-yaz
@@ -151,21 +157,23 @@ Eşikler GMDCSA-24'ün 1–3. deneklerinde tarandı, 4. denekte (hiç görülmem
 - **Yanlış düşme başka yerde yok:** normal otobüs 0/140, sarılma/çak 0/30, normal sokak 0/28, üretilmiş 7 olumsuz klip
   (koşan çocuk, şakalaşma, basketbol, kucaklaşma, kalabalık koridor, ajite hasta, okul çıkışı) 0/7.
   Üretilmiş hasta düşmesi yakalandı. Kavga kliplerinde 6/212 "düşme" çıktı (kavgada yere düşülüyor; doğru sayılabilir).
-- **Bayılma: yapay zekâ ile üretilmiş 2 klipte (15 sn) sınandı.**
+- **Bayılma: yapay zekâ ile üretilmiş 2 klipte (15 sn) sınandı** (`araclar/bayilma_olc.py` →
+  `test-sonuclari/bayilma_olcumu.json`).
 
-  | Klip | Düşme | Yerde hareketsiz kalma | Bayılma (10 sn eşik) | Bayılma (4 sn eşik) |
+  | Klip | Kişinin görüldüğü kare | Düşme | Bayılma (10 sn eşik) | Bayılma (4 sn eşik) |
   |---|---|---|---|---|
-  | Hastane koridoru, yaşlı adam yığılıyor | 9,0 sn ✓ | 10,4 → 15,0 sn (4,6 sn) | yok (klip bitti) | 14,4 sn ✓ |
-  | Okul koridoru, uzaktaki öğrenci düşüyor | 3,8 sn ✓ (yalnız `--imgsz 1280` ile) | ~5 → 15 sn (~9,8 sn) | yok (klip bitti) | 9,2 sn ✓ |
+  | Hastane koridoru, yaşlı adam yığılıyor (640) | 205/226 | 9,0 sn ✓ | yok (klip bitti) | 14,4 sn ✓ |
+  | Okul koridoru, uzaktaki öğrenci düşüyor (640) | 4/226 | yok | yok | yok |
+  | Aynı okul klibi, `--imgsz 1280` | 205/226 | 3,75 sn ✓ | yok (klip bitti) | 9,2 sn ✓ |
 
-  İki düşme de yakalandı, ardından gelen hareketsizlik de doğru ölçüldü; ama klipler 15 sn olduğu için 10 sn'lik
-  varsayılan eşik dolmadı. Okul klibinde öğrenci çok küçük (~50 piksel): varsayılan 640 çözünürlükte poz modeli
-  onu görmüyor, 1280'de görüyor. 30 sn'lik "hareketsiz yatıyor" hiç sınanmadı. Çıktı kareleri:
+  İki düşme de yakalandı; ardından 4 sn'lik eşikle "bayılma şüphesi" çıktı. Klipler 15 sn olduğu için 10 sn'lik
+  varsayılan eşik dolmadı. Okul klibinde öğrenci çok küçük: varsayılan 640 çözünürlükte poz modeli onu neredeyse
+  hiç görmüyor, 1280'de görüyor. 30 sn'lik "hareketsiz yatıyor" hiç sınanmadı. Çıktı kareleri:
   `docs/bayilma_kareler.jpg`.
 - **GMDCSA'da vekil ölçüm:** klipler 2–17 sn; düşmeden sonra en çok birkaç saniye kayıt var.
   1,5 sn'lik vekil eşikle: düşmeden sonra yerde hareketsiz kalma 18/79 düşme klibinde görüldü; günlük harekette
   (yatakta uzanma) 8/81 klipte "hareketsiz yatıyor" çıktı. Yatak bölgesi tanımlanmadan hastane odasında bu modül
-  uzanan hastalar için uyarı üretir. 10 ve 30 sn'lik gerçek eşikler için uzun klip gerekir (aşağıdaki çekim listesi).
+  uzanan hastalar için uyarı üretir. 10 ve 30 sn'lik gerçek eşikler için uzun klip gerekir.
 - Düşme modülü eğitimsiz ve GMDCSA-24 (CC BY 4.0) ile ayarlandı: kavga modelinin aksine **lisans engeli yok**.
 
 ### 4) Üretilmiş zor olumsuz kliplerde kavga alarmı (`araclar/uretilen_olc.py`)
@@ -284,7 +292,7 @@ B1 ve B2, Seedance 2.5 ile 15 sn, 720p, sessiz olarak üretildi (tek deneme).
 | `siddet/dusme.py` | düşme, bayılma şüphesi, hareketsiz yatma (kural) |
 | `siddet/analiz.py` | video → zaman çizelgesi (JSON + HTML) + gizlilikli video |
 | `siddet/olc.py` | alarm düzeyinde ölçüm → `test-sonuclari/alarm_olcumu.json` |
-| `araclar/` | model indirme, veri listesi, toplu iskelet çıkarma, Commons indirme, demo videosu, düşme ölçümü (`dusme_olc.py`), üretilmiş klip ölçümü (`uretilen_olc.py`) |
+| `araclar/` | bayılma ölçümü (`bayilma_olc.py`), model indirme, veri listesi, toplu iskelet çıkarma, Commons indirme, demo videosu, düşme ölçümü (`dusme_olc.py`), üretilmiş klip ölçümü (`uretilen_olc.py`) |
 | `LISANSLAR.md` | veri seti ve model lisans tablosu |
 
 `veri/`, `cikti/`, `ornekler/` ve model ağırlıkları depoya girmez (`.gitignore`). Modeller: `yolo11m-pose.pt`
